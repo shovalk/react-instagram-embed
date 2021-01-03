@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpack = require('dotenv-webpack');
 const pkg = require('./package.json');
 
-const { PORT = 8080, NODE_ENV = 'development' } = process.env;
+const { PORT = 8082, NODE_ENV = 'development' } = process.env;
 const prod = NODE_ENV === 'production';
 
 const htmlWebpackPluginConfig = {

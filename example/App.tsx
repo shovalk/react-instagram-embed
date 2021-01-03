@@ -7,7 +7,6 @@ import { hot } from 'react-hot-loader';
 import Fork from 'react-ghfork';
 import InstagramEmbed from 'react-instagram-embed';
 import hljs from 'highlight.js';
-import env from './env';
 
 interface State {
   url: string;
@@ -45,7 +44,7 @@ class App extends Component<{}, State> {
             url={this.state.url}
             maxWidth={parseInt(this.state.maxWidth, 10)}
             hideCaption={this.state.hideCaption}
-            clientAccessToken={env.INSTAGRAM_ACCESS_TOKEN}
+            clientAccessToken={'513908128626683|65c0919b7399a68861abeab2c3300c2d'}
           />
           <div className="ui">
             <span className="ui-label">Hide caption</span>
@@ -94,14 +93,7 @@ class App extends Component<{}, State> {
   };
 }
 
-const urls = [
-  'https://instagr.am/p/Zw9o4/',
-  'https://instagr.am/p/Ytlfl/',
-  'https://instagr.am/p/Zn1Xz/',
-  'https://instagr.am/p/HLLj2RgURT/',
-  'https://instagr.am/p/HeZ7IxgUUc/',
-  'https://instagr.am/p/LJ2tq9AUaO/'
-];
+const urls = ['https://www.instagram.com/p/CJeMTfnpDO5/', 'https://www.instagram.com/p/CJeCh3IpbCW/'];
 
 const getCode = (url: string, maxWidth: string, hideCaption: boolean) => `<InstagramEmbed
   clientAccessToken='<appId>|<clientToken>'
